@@ -1,0 +1,12 @@
+Git clone  https://github.com/davidbaik1/maple-bootloader.git
+
+Git add hardware.c
+Git commit -m "test" hardware.c
+Git commit --amend -s
+
+Git format-patch -1 //0001-test.patch
+Git reset --hard 5f09352278faf1b31b9e1bbef7c00f1469fb63b8 // 이전 commit으로 돌아감
+Git am 0001-test.patch //add 및 commit 까지 됨.
+
+
+Git diff
